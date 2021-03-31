@@ -1,22 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <Nav>
+    <NavItem href="/" isActive>Home</NavItem>
+    <NavItem href="/movies">Movies</NavItem>
+    <NavItem href="/shows">Shows</NavItem>
+    <NavItem href="/about">About</NavItem>
+  </Nav>
+  <router-view></router-view>
+  <Footer />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+import Nav from './components/Nav.vue'
+import NavItem from './components/NavItem.vue'
+import Footer from './components/Footer.vue'
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
